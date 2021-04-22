@@ -19,12 +19,9 @@ import com.codahale.metrics.Counter;
 import com.hivemq.swarm.extension.sdk.ExtensionContext;
 import com.hivemq.swarm.extension.sdk.ExtensionMain;
 import org.jetbrains.annotations.NotNull;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * This is the main class of the extension,
@@ -35,18 +32,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class HelloWorldMain implements ExtensionMain {
 
-    private static final Logger log = LoggerFactory.getLogger(HelloWorldMain.class);
-
     @Override
     public void extensionMain(final @NotNull ExtensionContext extensionContext) {
-
         final Counter counter = extensionContext.getMetricRegistry().counter("payloads.generated");
-        final @NotNull AtomicInteger next = new AtomicInteger(0);
-
-        extensionContext.getExtensionRegistry().addPayloadGenerator("my-generator", payloadGeneratorInput -> {
+        extensionContext.getExtensionRegistry().addPayloadGenerator("hello-world-generator", payloadGeneratorInput -> {
             counter.inc();
-            final String payload = payloadGeneratorInput.getTopic() + next.incrementAndGet();
-            log.info("payload-generated: " + payload);
+            final String payload = "HelloWorld";
             return ByteBuffer.wrap((payload).getBytes(StandardCharsets.UTF_8));
         });
     }

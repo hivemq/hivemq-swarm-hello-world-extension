@@ -1,9 +1,6 @@
 :hivemq-link: https://www.hivemq.com
-:hivemq-extension-docs: {hivemq-link}/docs/extensions/latest/
-:hivemq-mqtt-toolbox: {hivemq-link}/mqtt-toolbox
+:hivemq-extension-docs: {hivemq-link}/docs/swarm/latest/swarm/extensions.html
 :hivemq-support: {hivemq-link}/support/
-:hivemq-testcontainer: https://github.com/hivemq/hivemq-testcontainer
-:hivemq-mqtt-client: https://github.com/hivemq/hivemq-mqtt-client
 
 = HiveMQ Swarm Hello World Extension
 
@@ -13,6 +10,24 @@
 
 *License*: Apache License 2.0
 
+== Purpose
+
+This Hello World extension registers a `PayloadGenerator` which can be used in a publish command of the scenario.xml of HiveMQ Swarm
+to set every payload to "HelloWorld".
+
+We strongly recommend reading the {hivemq-extension-docs}[HiveMQ Swarm Extension Documentation] to grasp the core concepts of HiveMQ Swarm extension development.
+
+== Installation
+
+* Clone this repository into a Java 11 Gradle project.
+* Execute the Gradle task `jar` to build the extension.
+* Move the file: `build/libs/hivemq-swarm-hello-world-extension-4.6.0.jar` to the directory: `HIVEMQ_SWARM_HOME/extensions`
+* Use the payload generator in a publish command in the scenario.xml of your choice.
+----
+<publish topicGroup="tg1" count="100" rate="10/1s" payloadGeneratorType="hello-world-generator"/>
+----
+* Start HiveMQ Swarm.
+
 == Need Help?
 
 If you encounter any problems, we are happy to help.
@@ -20,9 +35,9 @@ The best place to get in contact is our {hivemq-support}[support^].
 
 == Contributing
 
-If you want to contribute to HiveMQ Hello World Extension, see the link:CONTRIBUTING.md[contribution guidelines].
+If you want to contribute to HiveMQ Swarm Hello World Extension, see the link:CONTRIBUTING.md[contribution guidelines].
 
 == License
 
-HiveMQ Hello World Extension is licensed under the `APACHE LICENSE, VERSION 2.0`.
+HiveMQ Swarm Hello World Extension is licensed under the `APACHE LICENSE, VERSION 2.0`.
 A copy of the license can be found link:LICENSE[here].
