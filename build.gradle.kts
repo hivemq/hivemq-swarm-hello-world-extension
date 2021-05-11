@@ -15,7 +15,6 @@ repositories {
 
 dependencies {
     implementation("com.hivemq:hivemq-swarm-extension-sdk:${property("swarm-extension-sdk.version")}")
-    implementation("io.dropwizard.metrics:metrics-core:${property("metrics-core.version")}")
     implementation("org.jetbrains:annotations:${property("jetbrains-annotations.version")}")
 }
 
