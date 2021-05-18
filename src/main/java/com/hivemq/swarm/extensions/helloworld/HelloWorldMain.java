@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.swarm.extensions;
+package com.hivemq.swarm.extensions.helloworld;
 
 import com.codahale.metrics.Counter;
 import com.hivemq.swarm.extension.sdk.ExtensionContext;
