@@ -4,16 +4,13 @@
 
 = HiveMQ Swarm Hello World Extension
 
-*Extension Type*: Demonstration
-
-*Version*: 4.7.2
-
-*License*: Apache License 2.0
+image:https://img.shields.io/badge/Extension_Type-Demonstration-orange?style=for-the-badge[Extension Type]
+image:https://img.shields.io/github/v/release/hivemq/hivemq-swarm-hello-world-extension?style=for-the-badge[GitHub release (latest by date),link=https://github.com/hivemq/hivemq-swarm-hello-world-extension/releases/latest]
+image:https://img.shields.io/github/license/hivemq/hivemq-swarm-hello-world-extension?style=for-the-badge&color=brightgreen[GitHub,link=LICENSE]
 
 == Purpose
 
-This Hello World extension registers a `PayloadGenerator` which can be used in a publish command of the scenario.xml of HiveMQ Swarm
-to set every payload to "HelloWorld".
+This Hello World extension registers a `PayloadGenerator` which can be used in a publish command of the scenario.xml of HiveMQ Swarm to set every payload to "HelloWorld".
 
 We strongly recommend reading the {hivemq-extension-docs}[HiveMQ Swarm Extension Documentation] to grasp the core concepts of HiveMQ Swarm extension development.
 
@@ -23,9 +20,11 @@ We strongly recommend reading the {hivemq-extension-docs}[HiveMQ Swarm Extension
 * Execute the Gradle task `jar` to build the extension.
 * Move the file: `build/libs/hivemq-swarm-hello-world-extension-4.7.2.jar` to the directory: `HIVEMQ_SWARM_HOME/extensions`
 * Use the payload generator in a publish command in the scenario.xml of your choice.
+
 ----
 <publish topicGroup="tg1" count="100" rate="10/1s" payloadGeneratorType="hello-world-generator"/>
 ----
+
 * Start HiveMQ Swarm.
 
 == Need Help?
