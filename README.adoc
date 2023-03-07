@@ -18,7 +18,7 @@ We strongly recommend reading the {hivemq-extension-docs}[HiveMQ Swarm Extension
 
 * Clone this repository into a Java 11 Gradle project.
 * Execute the Gradle task `jar` to build the extension.
-* Move the file: `build/libs/hivemq-swarm-hello-world-extension-4.12.0.jar` to the directory: `HIVEMQ_SWARM_HOME/extensions`
+* Move the file: `build/libs/hivemq-swarm-hello-world-extension-4.13.0.jar` to the directory: `HIVEMQ_SWARM_HOME/extensions`
 * Use the payload generator in a publish command in the scenario.xml of your choice.
 
 ----
