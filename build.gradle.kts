@@ -1,7 +1,7 @@
 plugins {
     java
-    id("io.github.sgtsilvio.gradle.defaults")
-    id("com.github.hierynomus.license")
+    alias(libs.plugins.defaults)
+    alias(libs.plugins.license)
 }
 
 group = "com.hivemq.swarm.extensions"
@@ -18,8 +18,8 @@ repositories {
 }
 
 dependencies {
-    implementation("com.hivemq:hivemq-swarm-extension-sdk:${property("swarm-extension-sdk.version")}")
-    implementation("org.jetbrains:annotations:${property("jetbrains-annotations.version")}")
+    implementation(libs.hivemq.swarm.extensionSdk)
+    implementation(libs.jetbrains.annotations)
 }
 
 license {
