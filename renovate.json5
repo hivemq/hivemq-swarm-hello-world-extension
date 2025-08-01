@@ -3,7 +3,7 @@
     extends: [
         'local>hivemq/renovate-config:default.json5',
     ],
-    baseBranches: [
+    baseBranchPatterns: [
         'master',
         'renovate-playground',
     ],
