@@ -1,6 +1,6 @@
 [versions]
 hivemq-platform = "4.20.0"
-jetbrains-annotations = "26.0.2"
+jetbrains-annotations = "26.0.2-1"
 
 [libraries]
 hivemq-swarm-extensionSdk = { module = "com.hivemq:hivemq-swarm-extension-sdk", version.ref = "hivemq-platform" }
