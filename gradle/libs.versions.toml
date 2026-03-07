@@ -7,5 +7,5 @@ hivemq-swarm-extensionSdk = { module = "com.hivemq:hivemq-swarm-extension-sdk", 
 jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
 
 [plugins]
-defaults = { id = "io.github.sgtsilvio.gradle.defaults", version = "0.2.0" }
+defaults = { id = "io.github.sgtsilvio.gradle.defaults", version = "0.3.0" }
 license = { id = "com.github.hierynomus.license", version = "0.16.1" }
