@@ -9,7 +9,13 @@ description = "HiveMQ Swarm Hello World Extension - a simple reference for all e
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(11)
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+tasks.compileJava {
+    javaCompiler = javaToolchains.compilerFor {
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
