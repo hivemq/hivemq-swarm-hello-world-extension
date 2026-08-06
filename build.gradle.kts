@@ -1,7 +1,7 @@
 plugins {
     java
     alias(libs.plugins.defaults)
-    alias(libs.plugins.license)
+    alias(libs.plugins.spotless)
 }
 
 group = "com.hivemq.swarm.extensions"
@@ -22,7 +22,8 @@ dependencies {
     implementation(libs.jetbrains.annotations)
 }
 
-license {
-    header = rootDir.resolve("HEADER")
-    mapping("java", "SLASHSTAR_STYLE")
+spotless {
+    java {
+        licenseHeaderFile(rootDir.resolve("HEADER"))
+    }
 }
